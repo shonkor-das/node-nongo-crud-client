@@ -4,13 +4,16 @@ import { Link, useLoaderData } from 'react-router-dom';
 const Home = () => {
 
     const users = useLoaderData();
+
     const [displayUsers, setDispayUsers] = useState(users);
 
     const handleDelete = user => {
         const agree = window.confirm(`Are you sure you want to delete: ${user.name}`);
         console.log(agree);
+        
         if (agree) {
             // console.log('deleting user with id:', user._id);
+
             fetch(`http://localhost:5000/users/${user._id}`, {
                 method: 'DELETE'
             })
