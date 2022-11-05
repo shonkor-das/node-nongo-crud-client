@@ -4,7 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 const Update = () => {
     const storeUser = useLoaderData();
     const [user, setUser] = useState({});
-
     
     const handleUpdateUser = event =>{
         event.preventDefault();
