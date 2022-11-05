@@ -6,8 +6,11 @@ const Update = () => {
     const [user, setUser] = useState({});
     
     const handleUpdateUser = event =>{
+
         event.preventDefault();
+
         // console.log(user);
+
         fetch(`http://localhost:5000/users/${storeUser._id}`,{
             method: 'PUT',
             headers: {
